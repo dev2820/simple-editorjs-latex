@@ -4,6 +4,7 @@ import "./style.css";
 import katex from "katex";
 import renderLatex from "./utils/renderLatex";
 import createBlock from "./ui/createBlock";
+import createInput from "./ui/createInput";
 
 export default class LaTeX {
   constructor({ data, api }) {
@@ -32,7 +33,7 @@ export default class LaTeX {
   render() {
     const $block = createBlock();
     const $preview = document.createElement("div");
-    const $input = document.createElement("input");
+    const $input = createInput(this.data, this.api.i18n.t("enter latex here"));
 
     if (!katex) {
       let errMessage = document.createElement("div");
@@ -41,9 +42,6 @@ export default class LaTeX {
       return errMessage;
     }
 
-    $input.value = this.data ?? "";
-    $input.setAttribute("placeholder", this.api.i18n.t("enter latex here"));
-    $input.classList.add("latex-input");
     renderLatex($input.value, $preview);
 
     $input.addEventListener("keyup", (e) => {
