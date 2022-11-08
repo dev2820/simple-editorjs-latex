@@ -38,4 +38,12 @@ module.exports = {
     libraryExport: "default",
 >>>>>>> 31a0904 (chore/ package build option change (to create LaTeX file))
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 };
