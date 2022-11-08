@@ -16,6 +16,11 @@ export default class LaTeX {
       },
     ];
   }
+  /**
+   * show toolbox when add block button
+   * @returns {title} name of block
+   * @returns {icon} latex icon
+   */
   static get toolbox() {
     return {
       title: "latex",
