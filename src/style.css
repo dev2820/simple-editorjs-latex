@@ -1,0 +1,44 @@
+.latex-block {
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+.latex-preview {
+  width: 100%;
+  min-height: 30px;
+  padding: 10px;
+  font-size: 1.1em;
+  text-align: center;
+}
+.latex-preview * {
+  font-family: "Katex_Math";
+}
+.latex-preview annotation {
+  display: none;
+}
+.latex-preview:focus {
+  background-color: #d4ecff;
+}
+.latex-input {
+  max-width: 600px;
+  height: 0px;
+  border-radius: 4px;
+  padding: 0 8px;
+  color: gray;
+  text-align: center;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.latex-block:focus-within .latex-input {
+  outline-color: #d4ecff;
+  color: black;
+  height: 30px;
+  opacity: 1;
+}
+.errorMessage {
+  color: red;
+}
