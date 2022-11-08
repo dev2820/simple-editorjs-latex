@@ -1,4 +1,4 @@
-.latex-block {
+.ce-block .latex-block {
   display: flex;
   flex-direction: column;
   transition: 0.3s;
@@ -6,23 +6,23 @@
   overflow: hidden;
   border: 1px solid #ccc;
 }
-.latex-preview {
+.ce-block .latex-block .latex-preview {
   width: 100%;
   min-height: 30px;
   padding: 10px;
   font-size: 1.1em;
   text-align: center;
 }
-.latex-preview * {
+.ce-block .latex-block .latex-preview * {
   font-family: "Katex_Math";
 }
-.latex-preview annotation {
+.ce-block .latex-block .latex-preview annotation {
   display: none;
 }
-.latex-preview:focus {
+.ce-block .latex-block .latex-preview:focus {
   background-color: #d4ecff;
 }
-.latex-input {
+.ce-block .latex-block .latex-input {
   max-width: 600px;
   height: 0px;
   border-radius: 4px;
@@ -33,12 +33,12 @@
   opacity: 0;
 }
 
-.latex-block:focus-within .latex-input {
+.ce-block .latex-block:focus-within .latex-input {
   outline-color: #d4ecff;
   color: black;
   height: 30px;
   opacity: 1;
 }
-.errorMessage {
+.ce-block .latex-block .errorMessage {
   color: red;
 }
