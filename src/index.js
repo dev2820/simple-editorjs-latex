@@ -43,10 +43,6 @@ export default class LaTeX {
     const $input = createInput({ value: this.data });
 
     try {
-      if (!katex) {
-        throw new Error(ERROR.TYPE.KATEX_NOT_FOUND);
-      }
-
       renderLatex($input.value, $preview);
       $input.addEventListener("keyup", (e) => {
         e.preventDefault();
