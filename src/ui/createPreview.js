@@ -1,4 +1,4 @@
-const createInput = (value, placeholder) => {
+const createInput = () => {
   const $preview = document.createElement("div");
 
   $preview.classList.add("latex-preview");
