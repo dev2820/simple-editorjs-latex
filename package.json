@@ -16,7 +16,10 @@
     "katex",
     "tool"
   ],
-  "author": "Gijo Yang <second28200@gmail.com>",
+  "author": {
+    "name": "Gijo Yang",
+    "email": "second28200@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dev2820/editorjs-latex/issues"
