@@ -1,6 +1,6 @@
 {
   "name": "editorjs-simple-latex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tools for entering LaTeX in EditorJS - based on katex",
   "main": "dist/LaTeX.js",
   "scripts": {
