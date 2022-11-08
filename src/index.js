@@ -7,7 +7,6 @@ import createBlock from "./ui/createBlock";
 import createInput from "./ui/createInput";
 import createPreview from "./ui/createPreview";
 import createErrorMessage from "./ui/createErrorMessage";
-import INPUT from "./constants/INPUT";
 import ERROR from "./constants/ERROR";
 
 export default class LaTeX {
