@@ -21,6 +21,9 @@
     "name": "Gijo Yang",
     "email": "second28200@gmail.com"
   },
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dev2820/editorjs-latex/issues"
