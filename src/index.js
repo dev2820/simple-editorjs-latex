@@ -13,14 +13,6 @@ export default class LaTeX {
   constructor({ data, api }) {
     this.data = data.latex;
     this.api = api;
-    this.settings = [
-      {
-        name: "modify",
-        title: this.api.i18n.t("modify"),
-        icon: '<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.77307 0.914814C5.86062 0.827266 5.96455 0.757819 6.07894 0.710439C6.19333 0.663058 6.31593 0.638672 6.43974 0.638672C6.56355 0.638672 6.68615 0.663058 6.80054 0.710439C6.91492 0.757819 7.01886 0.827266 7.1064 0.914814C7.19395 1.00236 7.2634 1.1063 7.31078 1.22068C7.35816 1.33507 7.38255 1.45767 7.38255 1.58148C7.38255 1.70529 7.35816 1.82789 7.31078 1.94228C7.2634 2.05667 7.19395 2.1606 7.1064 2.24815L2.6064 6.74815L0.773071 7.24815L1.27307 5.41481L5.77307 0.914814Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-        default: false,
-      },
-    ];
   }
   /**
    * show toolbox when add block button
