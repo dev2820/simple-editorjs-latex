@@ -6,6 +6,7 @@ import renderLatex from "./utils/renderLatex";
 import createBlock from "./ui/createBlock";
 import createInput from "./ui/createInput";
 import createPreview from "./ui/createPreview";
+import createErrorMessage from "./ui/createErrorMessage";
 import INPUT from "./constants/INPUT";
 
 export default class LaTeX {
@@ -38,10 +39,7 @@ export default class LaTeX {
     const $input = createInput({ value: this.data });
 
     if (!katex) {
-      let errMessage = document.createElement("div");
-      errMessage.innerText = "Oops! KaTeX is not found";
-
-      return errMessage;
+      return createErrorMessage();
     }
 
     renderLatex($input.value, $preview);
