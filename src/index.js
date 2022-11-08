@@ -2,6 +2,7 @@
 
 import "./style.css";
 import katex from "katex";
+import renderLatex from "./utils/renderLatex";
 
 export default class LaTeX {
   constructor({ data, api }) {
@@ -31,11 +32,6 @@ export default class LaTeX {
     const $block = document.createElement("div");
     const $preview = document.createElement("div");
     const $input = document.createElement("input");
-    const katexRender = (latex) => {
-      katex.render(latex, $preview, {
-        throwOnError: false,
-      });
-    };
 
     if (!katex) {
       let errMessage = document.createElement("div");
@@ -47,11 +43,11 @@ export default class LaTeX {
     $input.value = this.data ?? "";
     $input.setAttribute("placeholder", this.api.i18n.t("enter latex here"));
     $input.classList.add("latex-input");
-    katexRender($input.value);
+    renderLatex($input.value, $preview);
 
     $input.addEventListener("keyup", (e) => {
       e.preventDefault();
-      katexRender($input.value);
+      renderLatex($input.value, $preview);
     });
 
     $block.setAttribute("tabindex", 0);
