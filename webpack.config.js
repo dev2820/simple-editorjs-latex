@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: "LaTeX.js",
     path: path.resolve(__dirname, "dist"),
-    library: "editorjs-latex",
+    library: "editorjs-simple-latex",
     libraryTarget: "umd",
     libraryExport: "default",
   },
