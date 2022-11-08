@@ -1,0 +1,22 @@
+{
+  "name": "editorjs-latex",
+  "version": "1.0.0",
+  "description": "Tools for entering LaTeX in EditorJS - based on katex",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev2820/editorjs-latex.git"
+  },
+  "keywords": [
+    "editorjs",
+    "latex",
+    "katex",
+    "tool"
+  ],
+  "author": "Gijo Yang <second28200@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dev2820/editorjs-latex/issues"
+  },
+  "homepage": "https://github.com/dev2820/editorjs-latex#readme"
+}
