@@ -44,7 +44,6 @@ export default class LaTeX {
     }
 
     renderLatex($input.value, $preview);
-
     $input.addEventListener("keyup", (e) => {
       e.preventDefault();
       renderLatex($input.value, $preview);
