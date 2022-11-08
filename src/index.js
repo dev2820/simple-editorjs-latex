@@ -42,20 +42,26 @@ export default class LaTeX {
     const $preview = createPreview();
     const $input = createInput({ value: this.data });
 
-    if (!katex) {
-      return createErrorMessage(ERROR.TYPE.KATEX_NOT_FOUND);
-    }
+    try {
+      if (!katex) {
+        throw new Error(ERROR.TYPE.KATEX_NOT_FOUND);
+      }
 
-    renderLatex($input.value, $preview);
-    $input.addEventListener("keyup", (e) => {
-      e.preventDefault();
       renderLatex($input.value, $preview);
-    });
+      $input.addEventListener("keyup", (e) => {
+        e.preventDefault();
+        renderLatex($input.value, $preview);
+      });
 
-    $block.appendChild($preview);
-    $block.appendChild($input);
+      $block.appendChild($preview);
+      $block.appendChild($input);
 
-    return $block;
+      return $block;
+    } catch (err) {
+      if (err === ERROR.TYPE.KATEX_NOT_FOUND) {
+        return createErrorMessage(ERROR.TYPE.KATEX_NOT_FOUND);
+      }
+    }
   }
   /**
    * save latex string
