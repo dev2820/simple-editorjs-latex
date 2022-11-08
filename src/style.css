@@ -5,6 +5,7 @@
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid #ccc;
+  padding: 4px;
 }
 .ce-block .latex-block .latex-preview {
   width: 100%;
@@ -19,23 +20,19 @@
 .ce-block .latex-block .latex-preview annotation {
   display: none;
 }
-.ce-block .latex-block .latex-preview:focus {
-  background-color: #d4ecff;
-}
 .ce-block .latex-block .latex-input {
-  max-width: 600px;
   height: 0px;
-  border-radius: 4px;
-  padding: 0 8px;
-  color: gray;
+  padding-top: 4px;
+  color: #333;
   text-align: center;
   transition: 0.3s;
+  outline: none;
+  border: none;
+  border-top: 1px solid #ccc;
   opacity: 0;
 }
 
 .ce-block .latex-block:focus-within .latex-input {
-  outline-color: #d4ecff;
-  color: black;
   height: 30px;
   opacity: 1;
 }
