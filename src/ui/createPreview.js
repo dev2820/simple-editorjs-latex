@@ -1,7 +1,9 @@
+import PREVIEW from "../constants/PREVIEW";
+
 const createInput = () => {
   const $preview = document.createElement("div");
 
-  $preview.classList.add("latex-preview");
+  $preview.classList.add(PREVIEW.SELECTOR.SELF);
 
   return $preview;
 };
