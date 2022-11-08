@@ -1,11 +1,11 @@
-import SELECTOR from "../constants/INPUT";
+import INPUT from "../constants/INPUT";
 
-const createInput = (value, placeholder) => {
+const createInput = (value) => {
   const $input = document.createElement("input");
 
   $input.value = value ?? "";
-  $input.setAttribute("placeholder", placeholder);
-  $input.classList.add(SELECTOR.INPUT);
+  $input.setAttribute("placeholder", INPUT.PLACEHOLDER);
+  $input.classList.add(INPUT.SELECTOR.INPUT);
 
   return $input;
 };
