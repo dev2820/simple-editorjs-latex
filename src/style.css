@@ -14,25 +14,30 @@
   font-size: 1.1em;
   text-align: center;
 }
+.ce-block .latex-block .latex-preview.empty:before {
+  content: "Empty Latex Block";
+  color: #ccc;
+}
 .ce-block .latex-block .latex-preview * {
   font-family: "Katex_Math";
 }
 .ce-block .latex-block .latex-preview annotation {
   display: none;
 }
-.ce-block .latex-block .latex-input {
+.ce-block .latex-block input.latex-input {
   height: 0px;
-  padding-top: 4px;
-  color: #333;
+  color: #666;
   text-align: center;
   transition: 0.3s;
   outline: none;
   border: none;
-  border-top: 1px solid #ccc;
   opacity: 0;
+  padding: 0;
 }
 
-.ce-block .latex-block:focus-within .latex-input {
+.ce-block .latex-block:focus-within input.latex-input {
+  border-top: 1px solid #ccc;
+  padding-top: 4px;
   height: 30px;
   opacity: 1;
 }
