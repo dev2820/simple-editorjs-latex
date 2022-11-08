@@ -5,6 +5,7 @@ import katex from "katex";
 import renderLatex from "./utils/renderLatex";
 import createBlock from "./ui/createBlock";
 import createInput from "./ui/createInput";
+import createPreview from "./ui/createPreview";
 
 export default class LaTeX {
   constructor({ data, api }) {
@@ -32,7 +33,7 @@ export default class LaTeX {
   }
   render() {
     const $block = createBlock();
-    const $preview = document.createElement("div");
+    const $preview = createPreview();
     const $input = createInput(this.data, this.api.i18n.t("enter latex here"));
 
     if (!katex) {
@@ -52,7 +53,6 @@ export default class LaTeX {
     $block.appendChild($preview);
     $block.appendChild($input);
 
-    $preview.classList.add("latex-preview");
     return $block;
   }
 
