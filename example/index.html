@@ -1,15 +1,29 @@
-<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
-<script src="../dist/editorjs-latex.js"></script>
-<div id="editorjs"></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaTeX for EditorJS Example</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"
+      defer
+    ></script>
+    <script defer src="LaTeX.js"></script>
+  </head>
+  <body>
+    <div id="editorjs"></div>
 
-<script>
-  const editor = new EditorJS({
-    autofocus: true,
-    tools: {
-      latex: {
-        class: LaTeX,
-        shortcut: "CMD+SHIFT+M",
-      },
-    },
-  });
-</script>
+    <script type="module">
+      const editor = new EditorJS({
+        autofocus: true,
+        tools: {
+          latex: {
+            class: LaTeX,
+            shortcut: "CMD+SHIFT+M",
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
