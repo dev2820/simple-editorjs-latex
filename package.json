@@ -2,7 +2,7 @@
   "name": "editorjs-latex",
   "version": "1.0.0",
   "description": "Tools for entering LaTeX in EditorJS - based on katex",
-  "main": "./src/index.js",
+  "main": "dist/latex.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "start": "webpack serve --open"
