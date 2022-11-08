@@ -1,7 +1,7 @@
 "use strict";
 
+import "./style.css";
 import katex from "katex";
-import style from "./style.css";
 
 export default class LaTeX {
   constructor({ data, api }) {
