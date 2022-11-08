@@ -5,7 +5,7 @@ const createInput = ({ value }) => {
 
   $input.value = value ?? "";
   $input.setAttribute("placeholder", INPUT.PLACEHOLDER);
-  $input.classList.add(INPUT.SELECTOR.INPUT);
+  $input.classList.add(INPUT.SELECTOR.SELF);
 
   return $input;
 };
