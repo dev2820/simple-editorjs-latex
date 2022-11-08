@@ -1,7 +1,4 @@
-"use strict";
-
 import "./style.css";
-import katex from "katex";
 import renderLatex from "./utils/renderLatex";
 import createBlock from "./ui/createBlock";
 import createInput from "./ui/createInput";
