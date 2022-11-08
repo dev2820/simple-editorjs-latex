@@ -8,6 +8,7 @@ import createInput from "./ui/createInput";
 import createPreview from "./ui/createPreview";
 import createErrorMessage from "./ui/createErrorMessage";
 import INPUT from "./constants/INPUT";
+import ERROR from "./constants/ERROR";
 
 export default class LaTeX {
   constructor({ data, api }) {
@@ -39,7 +40,7 @@ export default class LaTeX {
     const $input = createInput({ value: this.data });
 
     if (!katex) {
-      return createErrorMessage();
+      return createErrorMessage(ERROR.TYPE.KATEX_NOT_FOUND);
     }
 
     renderLatex($input.value, $preview);
