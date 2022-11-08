@@ -35,7 +35,7 @@ export default class LaTeX {
   render() {
     const $block = createBlock();
     const $preview = createPreview();
-    const $input = createInput(this.data);
+    const $input = createInput({ value: this.data });
 
     if (!katex) {
       let errMessage = document.createElement("div");
