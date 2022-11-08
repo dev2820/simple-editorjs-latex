@@ -3,6 +3,7 @@
 import "./style.css";
 import katex from "katex";
 import renderLatex from "./utils/renderLatex";
+import createBlock from "./ui/createBlock";
 
 export default class LaTeX {
   constructor({ data, api }) {
@@ -29,7 +30,7 @@ export default class LaTeX {
     };
   }
   render() {
-    const $block = document.createElement("div");
+    const $block = createBlock();
     const $preview = document.createElement("div");
     const $input = document.createElement("input");
 
@@ -50,8 +51,6 @@ export default class LaTeX {
       renderLatex($input.value, $preview);
     });
 
-    $block.setAttribute("tabindex", 0);
-    $block.classList.add("latex-block");
     $block.appendChild($preview);
     $block.appendChild($input);
 
