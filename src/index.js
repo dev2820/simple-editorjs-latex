@@ -6,6 +6,7 @@ import renderLatex from "./utils/renderLatex";
 import createBlock from "./ui/createBlock";
 import createInput from "./ui/createInput";
 import createPreview from "./ui/createPreview";
+import INPUT from "./constants/INPUT";
 
 export default class LaTeX {
   constructor({ data, api }) {
@@ -34,7 +35,7 @@ export default class LaTeX {
   render() {
     const $block = createBlock();
     const $preview = createPreview();
-    const $input = createInput(this.data, this.api.i18n.t("enter latex here"));
+    const $input = createInput(this.data, INPUT.PLACEHOLDER);
 
     if (!katex) {
       let errMessage = document.createElement("div");
