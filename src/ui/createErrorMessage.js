@@ -1,7 +1,20 @@
-const createErrorMessage = () => {
+import ERROR from "../constants/ERROR";
+
+const createErrorMessage = (errType) => {
   let $error = document.createElement("div");
 
-  $error.innerText = "Oops! KaTeX is not found";
+  switch (errType) {
+    case ERROR.TYPE.KATEX_NOT_FOUND: {
+      $error.innerText = ERROR.MESSAGE.KATEX_NOT_FOUND;
+      break;
+    }
+    default: {
+      $error.innerText = ERROR.MESSAGE.UNKNOWN;
+      break;
+    }
+  }
 
   return $error;
 };
+
+export default createErrorMessage;
